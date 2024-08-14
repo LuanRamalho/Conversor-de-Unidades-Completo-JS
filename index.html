@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Unidades</h1>
+        <div class="converter">
+            <label for="measureType">Tipo de Medida:</label>
+            <select id="measureType" onchange="populateUnits()">
+                <option value="">Selecione...</option>
+                <option value="mass">Massa</option>
+                <option value="volume">Volume</option>
+                <option value="fuel">Combustível</option>
+                <option value="speed">Velocidade</option>
+                <option value="data">Dados</option>
+                <option value="length">Comprimento</option>
+                <option value="temperature">Temperatura</option>
+                <option value="time">Tempo</option>
+            </select>
+
+            <label for="unitFrom">De:</label>
+            <select id="unitFrom"></select>
+
+            <label for="unitTo">Para:</label>
+            <select id="unitTo"></select>
+
+            <label for="value">Valor:</label>
+            <input type="number" id="value" />
+
+            <button onclick="convert()">Converter</button>
+
+            <div class="result">
+                <h2>Resultado:</h2>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
